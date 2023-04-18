@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "440da6ba-5d36-44ee-b55e-f379bc2c776e",
+  "uuid": "92a53e3b-12d5-42d6-a8a2-1fe9220fef95",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "440da6ba-5d36-44ee-b55e-f379bc2c776e@6c48a",
-      "displayName": "khinkali",
+      "uuid": "92a53e3b-12d5-42d6-a8a2-1fe9220fef95@6c48a",
+      "displayName": "suluguni",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "440da6ba-5d36-44ee-b55e-f379bc2c776e",
+        "imageUuidOrDatabaseUri": "92a53e3b-12d5-42d6-a8a2-1fe9220fef95",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,12 +34,12 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "440da6ba-5d36-44ee-b55e-f379bc2c776e@f9941",
-      "displayName": "khinkali",
+      "uuid": "92a53e3b-12d5-42d6-a8a2-1fe9220fef95@f9941",
+      "displayName": "suluguni",
       "id": "f9941",
       "name": "spriteFrame",
       "userData": {
-        "trimType": "none",
+        "trimType": "auto",
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "440da6ba-5d36-44ee-b55e-f379bc2c776e@6c48a",
+        "imageUuidOrDatabaseUri": "92a53e3b-12d5-42d6-a8a2-1fe9220fef95@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.11",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "440da6ba-5d36-44ee-b55e-f379bc2c776e@f9941"
+    "redirect": "92a53e3b-12d5-42d6-a8a2-1fe9220fef95@f9941"
   }
 }

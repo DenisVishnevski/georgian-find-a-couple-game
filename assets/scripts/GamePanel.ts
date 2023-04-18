@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Sprite, SpriteFrame } from 'cc';
+import { _decorator, Component, Node, random, Sprite, SpriteFrame } from 'cc';
 import { Card } from './Card';
 const { ccclass, property } = _decorator;
 
@@ -10,10 +10,13 @@ export class GamePanel extends Component {
     private items: SpriteFrame[] = [];
     private cards: Sprite[] = [];
 
-    private itemsCount: number = 4;
+    private itemsCount: number = 9;
     private cardsCount = 16;
 
     private isLoaded: boolean = false;
+
+    private cardsIdArray1: number[] = [];
+    private cardsIdArray2: number[] = [];
 
     protected async start() {
         await this.initItems();
@@ -65,10 +68,23 @@ export class GamePanel extends Component {
     }
 
     private async addItems(): Promise<void> {
+ 
+
         this.cards.forEach((card: Sprite) => {
-            const randomNumber = this.getRandomNumber()
-            card.getComponent(Card).setId(randomNumber);
+            card.getComponent(Card).setId(this.getCardId(this.getRandomNumber()));
         });
+    }
+
+    getCardId(randomNumber: number) {
+        if (this.cardsIdArray1.indexOf(randomNumber) === -1) {
+            this.cardsIdArray1.push(randomNumber);
+            return randomNumber
+        }
+        if (this.cardsIdArray2.indexOf(randomNumber) === -1) {
+            this.cardsIdArray2.push(randomNumber);
+            return randomNumber
+        }
+        return this.getCardId(this.getRandomNumber());
     }
 
     getRandomNumber(): number {

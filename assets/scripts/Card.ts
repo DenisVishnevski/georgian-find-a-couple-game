@@ -5,7 +5,7 @@ const { ccclass, property } = _decorator;
 
 @ccclass('Card')
 export class Card extends Component {
-    @property({type: GamePanel})
+    @property({type: Node})
     private gamePanel: Node = null;
 
     private id: number = 0;

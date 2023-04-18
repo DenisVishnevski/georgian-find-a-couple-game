@@ -1,9 +1,13 @@
 import { _decorator, Component, Node } from 'cc';
 import { Card } from './Card';
+import { Counter } from './Counter';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameProcess')
 export class GameProcess extends Component {
+    @property({type: Counter})
+    private counter: Counter = null
+
     private isFree: boolean = true
 
     private firstCard: Card = null;
@@ -23,7 +27,9 @@ export class GameProcess extends Component {
                     this.firstCard.complete();
                     this.secondCard.complete();
 
-                    // ...
+                    if (this.counter) {
+                        this.counter.coupleFound()
+                    }
                 }
                 else {
                     this.firstCard.close();
